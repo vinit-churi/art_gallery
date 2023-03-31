@@ -1,0 +1,7 @@
+# steps
+1. => we will setup the browser router and the context ✅
+2. => we will set up the api and fetch the data required to be rendered on the hom page
+    1. => feature collection
+    2. => feature galleries
+    3. => featured arts
+3. => we will start making the components  
