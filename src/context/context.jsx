@@ -1,14 +1,7 @@
 import { createContext, useState } from "react";
 const context = createContext();
 const ContextProvider = ({ children }) => {
-    const [artists, setArtists] = useState(null);
-    const [artWorks, setArtWorks] = useState(null);
-    const value = {
-        artists,
-        setArtists,
-        artWorks,
-        setArtWorks,
-    };
+    const value = { isLoggedIn: false };
     return <context.Provider value={value}>{children}</context.Provider>;
 };
 

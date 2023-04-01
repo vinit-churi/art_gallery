@@ -1,14 +1,15 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import { v4 as uuidv4 } from "uuid";
 import "./App.css";
+import "react-loading-skeleton/dist/skeleton.css";
 import { ContextProvider } from "./context/context";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
-import ArtistPage from "./components/pages/ArtistsPage";
-import ArtWorkPage from "./components/pages/ArtWorkPage";
-import GalleriesPage from "./components/pages/GalleriesPage";
 import HomePage from "./components/pages/HomePage";
+import CategoryImages from "./components/CategoryImages";
+import fetchCategoryImages from "./context/fetchCategoryImages";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -19,16 +20,9 @@ const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: "/artists",
-                element: <ArtistPage />,
-            },
-            {
-                path: "/artworks",
-                element: <ArtWorkPage />,
-            },
-            {
-                path: "/galleries",
-                element: <GalleriesPage />,
+                path: "/category/:categoryName",
+                element: <CategoryImages />,
+                loader: fetchCategoryImages,
             },
         ],
     },
