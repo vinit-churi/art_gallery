@@ -1,6 +1,8 @@
 # art_gallery
 
-<img style="display:block;margin: 0px auto" src="./src/assets/logo/svgexport-27.svg" />
+<p align="center">
+    <img style="display:block;margin: 0px auto" src="./src/assets/logo/svgexport-27.svg" />
+</p>
 
 ---
 
